@@ -1,0 +1,94 @@
+<article
+		class="about | bg-primary text-secondary wrapper flow"
+		id="about"
+	>
+		<h2 class="about__title | fs-700 fw-bold text-center">About me</h2>
+        <p class="fs-500 italic text-center">I’m passionate about designing and developing functional websites that address real-world problems</p>
+		<div class="grid">
+			<article class="flow">
+                <h3 class="fs-600 ff-heading fw-bold">Get to know me!</h3>
+                <p>I'm a passionate front-end developer focused on creating functional and intuitive websites that improve lives and provide real value for businesses.</p>
+                <p>With expertise in HTML, CSS, and JavaScript, I build responsive, user-friendly web experiences.</p>
+                <p>If you're looking for a dedicated developer to bring your vision to life, let's work together to create solutions that drive your business forward.</p>
+            </article>
+			<article class="ff-heading flow">
+				<h3 class="fs-600 fw-bold">My toolkit</h3>
+				<ul class="about__skills |  flex" role="list">
+					<li class="about__skill | bg-light fw-bold">
+						HTML
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						CSS
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						JavaScript
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						React
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						Node.js
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						Express.js
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						SEO
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						Astro
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						CLI
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						Git
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						A11y
+					</li>
+					<li class="about__skill | bg-light fw-bold">
+						APIs
+					</li>
+				</ul>
+			</article>
+		</div>
+	</article>
+    <style>
+        .about{
+            padding-block: calc(var(--space-2xl-3xl) * 2);
+        }
+
+        .about__title{
+            position: relative;
+            /* outline: 3px solid lime; */
+            padding-bottom: var(--space-m);
+        }
+
+        .about__title::before{
+            content: "";
+            position: absolute;
+            width: 2.5rem;
+            height: 5px;
+            background-color: hsl(var(--clr-accent));
+            border-radius: 100vmax;
+            inset: auto auto 0 auto;
+            margin-left: calc(var(--space-m) * 2);
+        }
+
+        @media (width > 35em){
+            .about > div{
+                outline: 3px solid lime;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about__skills{
+            flex-wrap: wrap;
+        }
+
+        .about__skill{
+            padding: .75em 1em;
+            border-radius: 5px;
+        }
+    </style>
