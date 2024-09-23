@@ -1,8 +1,12 @@
+---
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
 <article
 		class="about | bg-primary text-secondary wrapper flow"
 		id="about"
 	>
-		<h2 class="about__title | fs-700 fw-bold text-center">About me</h2>
+		<SectionTitle title="About me" />
         <p class="fs-500 italic text-center">I’m passionate about designing and developing functional websites that address real-world problems</p>
 		<div class="grid">
 			<article class="flow">
@@ -57,23 +61,6 @@
     <style>
         .about{
             padding-block: calc(var(--space-2xl-3xl) * 2);
-        }
-
-        .about__title{
-            position: relative;
-            /* outline: 3px solid lime; */
-            padding-bottom: var(--space-m);
-        }
-
-        .about__title::before{
-            content: "";
-            position: absolute;
-            width: 2.5rem;
-            height: 5px;
-            background-color: hsl(var(--clr-accent));
-            border-radius: 100vmax;
-            inset: auto auto 0 auto;
-            margin-left: calc(var(--space-m) * 2);
         }
 
         @media (width > 35em){
