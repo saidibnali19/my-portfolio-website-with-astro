@@ -20,6 +20,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-primary text-secondary fs-400 ff-body">
+		
 		<slot />
 	</body>
 </html>
@@ -318,4 +319,30 @@ p {
     display: grid;
     gap: var(--space-m);
 }
+
+.change{
+    transform: translateY(0)!important;
+}
 </style>
+<script>
+    // For changing navigation styles based on scroll
+const changingNav = document.querySelector("[data-primary-nav]");
+const hero = document.querySelector("[data-hero]")
+
+const fadeInNavOptions = {
+    rootMargin: "-106px 0px 0px 0px",
+    threshold: 0,
+};
+
+const fadeInObserver = new IntersectionObserver((entries, fadeInObserver) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            changingNav.classList.add("change")
+        } else {
+            changingNav.classList.remove("change")
+        }
+    });
+}, fadeInNavOptions);
+
+fadeInObserver.observe(hero);
+</script>
