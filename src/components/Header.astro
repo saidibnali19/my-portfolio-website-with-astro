@@ -1,3 +1,6 @@
+---
+import Icon from "../../public/images/icon.webp"
+---
 <header class="wrapper">
     <div class="primary-header | bg-primary ff-heading" data-primary-nav>
         <div class="flex wrapper">
@@ -7,7 +10,7 @@
                 >Skip to main content</a
             >
             <a class="logo | flex" href="/">
-                <div><img class="logo__image" src="../../public/images/icon.webp" alt=""></div>
+                <div><img class="logo__image" src={Icon.src} alt=""></div>
                 <span class="logo__text | fs-500 fw-bold no-underline">
                     Said Ali
                 </span>
@@ -24,7 +27,7 @@
             <nav>
                 <ul
                     id="primary-navigation"
-                    class="header-menu | text-secondary uppercase flex"
+                    class="header-menu | text-secondary flex"
                     data-header-menu
                     role="list"
                     data-visible="false"
@@ -169,6 +172,7 @@ div:has(>.logo__image){
         padding: 108px 0 0 1rem;
         transform: translate(100%);
         transition: transform 0.35s ease-out;
+        min-height: 100svh;
     }
 
     .header-menu[data-visible="true"] {
@@ -242,7 +246,6 @@ div:has(>.logo__image){
     // To close the menu by clicking outside of it
     document.addEventListener("click", e => {
         if (!menu.contains(e.target) && !menuToggler.contains(e.target)) {
-            console.log("You clicked outside the menu")
             menu.setAttribute("data-visible", false);
             menuToggler.setAttribute("aria-expanded", false);
         } else return
