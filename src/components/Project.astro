@@ -49,12 +49,12 @@ const { projectTitle, projectDescription, projectImage, projectLink } = Astro.pr
 .project {
     border-radius: .5rem;
     overflow: clip;
-    box-shadow: 0 0 5px hsl(0 0% 0% / .35);
+    box-shadow: var(--box-shadow);
     transition: box-shadow .3s ease, transform .3s ease;
 }
 
 .project:where(:hover, :focus-within) {
-    box-shadow: 0 0 64px -10px hsl(0 0% 0% / .35);
+    box-shadow: var(--box-shadow-lifted);
     transform: scale(1.01);
 }
 

@@ -13,7 +13,8 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Portfolio website for Said Ali, front end developer" />
+        <meta name="keywords" content="Said Ali, portfolio website, Front end developer in Nairobi" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -170,6 +171,9 @@ p {
     --fw-normal: normal;
 
     --primary-header-min-height: 6rem;
+
+    --box-shadow: 0 0 5px hsl(0 0% 0% / .35);
+    --box-shadow-lifted: 0 0 64px -10px hsl(0 0% 0% / .35);
 }
 
 /* Typography */
@@ -275,30 +279,20 @@ p {
     transform: translateY(-.1em);
 }
 
-.btn-secondary {
-    padding: 0.3em 1em;
-    border: 2px solid hsl(var(--clr-accent));
+.section-title{
     position: relative;
-    isolation: isolate;
+    padding-bottom: var(--space-m);
 }
 
-.btn-secondary::after {
+.section-title::before{
     content: "";
     position: absolute;
-    inset: 0;
+    width: 2.5rem;
+    height: 5px;
     background-color: hsl(var(--clr-accent));
-    z-index: -1;
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform 350ms ease-in-out, color 350ms ease-in-out;
-}
-
-.btn-secondary:is(:hover, :focus-within) {
-    color: hsl(var(--clr-primary));
-}
-
-.btn-secondary:is(:hover, :focus-within)::after {
-    transform: scale(1);
+    border-radius: 100vmax;
+    inset: auto auto 0 auto;
+    margin-left: calc(var(--space-m) * 2);
 }
 
 /* Layout */

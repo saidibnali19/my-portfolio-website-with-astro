@@ -1,8 +1,5 @@
----
-import SectionTitle from "./SectionTitle.astro"
----
 <article class="contact | wrapper flow" id="contact">
-    <SectionTitle title="Contact me" />
+    <h4 class="section-title | fs-700 ff-heading fw-bold text-center">Contact me</h4>
     <form
         class="form | bg-primary flow"
         action="https://formspree.io/f/mgedbqlj"
@@ -66,14 +63,14 @@ input, textarea{
     padding: 1rem;
     border: 2px solid hsl(var(--clr-secondary));
     border-radius: .5rem;
-    box-shadow: 0 0 5px hsl(0 0% 0% / .35);
+    box-shadow: var(--box-shadow);
     transition: box-shadow .3s ease, border-color .3s ease;
 }
 
 input:where(:focus,:focus-within),
 textarea:where(:focus,:focus-within) {
     border-color: hsl(var(--clr-accent));
-    box-shadow: 0 0 64px -10px hsl(0 0% 0% / .35);
+    box-shadow: var(--box-shadow-lifted);
     outline: none;
 }
 
