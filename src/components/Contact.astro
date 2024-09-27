@@ -67,11 +67,15 @@ input, textarea{
     transition: box-shadow .3s ease, border-color .3s ease;
 }
 
-input:where(:focus,:focus-within),
-textarea:where(:focus,:focus-within) {
+input:focus-visible,
+textarea:focus-visible {
     border-color: hsl(var(--clr-accent));
     box-shadow: var(--box-shadow-lifted);
     outline: none;
+}
+
+form:invalid{
+    border-color: red;
 }
 
 textarea{
