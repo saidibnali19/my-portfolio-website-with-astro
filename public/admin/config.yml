@@ -1,12 +1,6 @@
 backend:
-    name: github
-    repo: saidibnali19/my-portfolio-website-with-astro
-    branch: netlifycms
-    local_backend: true
-
-# backend:
-#     name: test-repo
-#     local_backend: true
+    name: git-gateway
+    branch: main
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
