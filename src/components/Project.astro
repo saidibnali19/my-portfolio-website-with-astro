@@ -1,13 +1,14 @@
 ---
-const { projectTitle, projectDescription, projectImage, projectLink } = Astro.props;
+const { title, description, url, image } = Astro.props;
 ---
+
 <article class="project | bg-primary grid">
     <div class="grid">
-        <h3 class="fs-500">{projectTitle}</h3>
-        <p class="project__description">{projectDescription}</p>
+        <h3 class="fs-500">{title}</h3>
+        <p class="project__description">{description}</p>
         <a
             class="project__cta | text-light bg-accent btn-primary grid"
-            href={projectLink}
+            href={url}
             target="_blank"
             >
             <span>Check it</span>
@@ -18,7 +19,7 @@ const { projectTitle, projectDescription, projectImage, projectLink } = Astro.pr
     </div>
     <img
         class="project__image"
-        src={projectImage}
+        src={image}
         loading="lazy"
         alt=""
         width="1505"
