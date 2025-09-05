@@ -13,6 +13,7 @@
     "@fontsource/roboto": "^5.1.0",
     "@fontsource/space-mono": "^5.1.0",
     "astro": "^4.15.8",
-    "decap-cms": "^3.8.3"
+    "decap-cms": "^3.8.3",
+    "decap-cms-app": "^3.8.3"
   }
 }
