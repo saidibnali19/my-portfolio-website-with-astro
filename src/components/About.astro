@@ -5,6 +5,17 @@
 	<h2 class="section-title | fs-700 ff-heading fw-bold text-center">About me</h2>
         <p class="fs-500 italic text-center">I’m passionate about designing and developing functional websites that address real-world problems</p>
 		<div class="grid">
+			<figure class="about__photo">
+				<img
+					
+					src="/said-portrait.webp"
+					alt="Said Ali smiling in a navy suit against a warm terracotta backdrop"
+					width="1500"
+					height="1970"
+					loading="lazy"
+				/>
+			</figure>
+	<div class="about__content flow">
 			<article class="flow">
                 <h3 class="fs-600 ff-heading fw-bold">Get to know me!</h3>
                 <p>I'm a passionate front-end developer focused on creating functional and intuitive websites that improve lives and provide real value for businesses.</p>
@@ -64,6 +75,7 @@
 					</li>
 				</ul>
 			</article>
+			</div>
 		</div>
 	</article>
     <style>
@@ -74,7 +86,14 @@
         @media (width > 35em){
             .about > div{
                 grid-template-columns: 1fr 1fr;
+	
             }
+
+			.about__photo{
+				position: sticky;
+				top: 7.0625rem;
+				align-self: start;
+			}
         }
 
         .about__skills{
@@ -85,4 +104,18 @@
             padding: .75em 1em;
             border-radius: 5px;
         }
+
+		.about__photo{
+			margin: 0;
+		}
+
+		.about__photo img{
+			display: block;
+			width: 100%;
+			max-height: 70vh;
+			max-height: 70svh;	
+			object-fit: cover;
+			object-position: center top;
+			border-radius: 12px;
+		}
     </style>
